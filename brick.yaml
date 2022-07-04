@@ -1,0 +1,32 @@
+name: elementary_widget
+description: Brick with boilerplate code for Elementary package
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.26 <0.1.0"
+
+vars:
+  name:
+    type: string
+    description: widget name
+    prompt: How will we call it?
+  di_scope:
+    type: string
+    default: i app scope
+    description: name of di scope interface
+    prompt: Do we have DiScope to consume?
+  type:
+    type: enum
+    description: Is it a widget or screen?
+    default: widget
+    values:
+      - widget
+      - screen
+  wm_suffix:
+    type: enum
+    description: Cut `wm` or full `widget_model` filename suffix?
+    default: wm
+    values:
+      - wm
+      - widget_model
